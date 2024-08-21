@@ -1,0 +1,26 @@
+// char* demangle(const char *demangle) {
+//     int status;
+//     return abi::__cxa_demangle(demangle, 0, 0, &status);
+// }
+
+static inline data_type bus2data_type(data_bus_type bus_data){
+    int64_t bus_data_casted = bus_data;
+    // addr_bus_type hoge;
+    // std::cout << "data_bus_type : " << demangle(typeid(bus_data).name()) << '\n';
+    // std::cout << "addr_bus_type : " << demangle(typeid(hoge).name()) << '\n';
+    // std::cout << "int64_t : " << demangle(typeid(_bus_data).name()) << '\n';
+    // std::cout << bus_data << " -> " << bus_data_casted << " -> " << *((data_type*) &bus_data_casted) << std::endl << std::endl;
+    return *((data_type*) &bus_data_casted);
+}
+
+static inline data_bus_type data_type2bus(data_type data){
+    ac_int<data_bit_width, true> data_shifted;
+    data_shifted.range<data_bit_width - 1, 0>() = data.range<data_bit_width - 1, 0>();
+    int64_t data_casted = data_shifted.to_int64();
+    // std::cout << data << " -> " << data_shifted << " -> " << data_casted << " -> " << *((data_bus_type*) &data_casted) << std::endl;
+    return *((data_bus_type*) &data_casted);
+}
+
+static inline addr_type bus2addr_type(addr_bus_type bus_addr){
+    return *((addr_type*) &bus_addr);
+} 

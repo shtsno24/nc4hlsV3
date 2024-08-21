@@ -1,0 +1,18 @@
+#ifdef DUMP_LOG_DENSE
+dense::decoder<data_t, addr_t, signal_t, thread>(0, 0, 0, src_size,
+                                                        0, 0, 0, dst_size,
+                                                        CONST_VEC,
+                                                        mode,
+                                                        ADDR_SRC_VEC, ISVALID_SRC_VEC,
+                                                        ADDR_DST_VEC,
+                                                        ADDR_WEIGHT_VEC, ADDR_BIAS_VEC,
+                                                        _dump_file);
+#else
+dense::decoder<data_t, addr_t, signal_t, thread>(0, 0, 0, src_size,
+                                                        0, 0, 0, dst_size,
+                                                        CONST_VEC,
+                                                        mode,
+                                                        ADDR_SRC_VEC, ISVALID_SRC_VEC,
+                                                        ADDR_DST_VEC,
+                                                        ADDR_WEIGHT_VEC, ADDR_BIAS_VEC);
+#endif

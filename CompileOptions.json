@@ -1,0 +1,29 @@
+{
+    "constant": {
+        "thread": 11,
+        "data_t": "float",
+        "signal_t": "int16_t"
+    },
+    "dir": {
+        "model_dir": "./test/ref/",
+        "model_h5": "TestModel_GlobalAveragePooling2D.h5",
+        "weight_h5": "TestModel_GlobalAveragePooling2D_Weights.h5",
+        "auto_gen_dir": "./auto_gen/",
+        "cpp_layer_dir": "./src/Layer/",
+        "hpp_memory_dir": "./src/Template/",
+        "integrated_block_dir": "./src/Template/",
+        "compile_and_run_dir": "./src/BashFiles4Compile/",
+        "ac_datatypes_dir": "./src/ac_datatypes/include/",
+        "validate_folder_name": "validate",
+        "speed_test_folder_name": "speed_test",
+        "xilinx_test_folder_name": "xilinx_test",
+        "template_folder_name": "template",
+        "log_folder_name": "log",
+        "dump_folder_name": "dump",
+        "products_folder_name": "products"
+    },
+    "config": {
+        "export_addr_code": false
+    },
+    "summary_name": "Summary.md"
+}

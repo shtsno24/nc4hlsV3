@@ -1,0 +1,6 @@
+/src/Layer/*/*/log/*
+/test/*/log
+**/.vscode
+/src/__pycache__/*
+/auto_gen/*
+*.pyc

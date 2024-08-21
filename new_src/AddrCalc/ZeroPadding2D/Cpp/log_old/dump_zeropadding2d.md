@@ -1,0 +1,148 @@
+# ZEROPADDING2D_LAYER_TEST
+
+## TEST_0(reset)
+
+LAYER_STATUS_REG : 2  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+
+LAYER_STATUS_REG : 2  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+
+LAYER_STATUS_REG : 2  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+
+LAYER_STATUS_REG : 2  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+
+LAYER_STATUS_REG : 2  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+
+LAYER_STATUS_REG : 2  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+
+## TEST_1(run)
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [48, 42, 36, 30, 24, 18, 12, 6]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [2, 2, 2, 2, 2, 2, 2, 2]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [40, 35, 30, 25, 20, 15, 10, 5]  
+DATA_OUT_VEC : [40, 35, 30, 25, 20, 15, 10, 5]  
+INVALID_THREAD_IN_VEC : [1, 1, 1, 1, 1, 1, 1, 1]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [32, 28, 24, 20, 16, 12, 8, 4]  
+DATA_OUT_VEC : [32, 28, 24, 20, 16, 12, 8, 4]  
+INVALID_THREAD_IN_VEC : [1, 1, 1, 1, 1, 1, 1, 1]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [24, 21, 18, 15, 12, 9, 6, 3]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [2, 2, 2, 2, 2, 2, 2, 2]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [16, 14, 12, 10, 8, 6, 4, 2]  
+DATA_OUT_VEC : [16, 14, 12, 10, 8, 6, 4, 2]  
+INVALID_THREAD_IN_VEC : [1, 1, 1, 1, 1, 1, 1, 1]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+INVALID_THREAD_IN_VEC : [1, 1, 1, 1, 1, 1, 1, 1]  
+
+## TEST_2 (run with thread-by-thread control)
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [48, 42, 36, 30, 24, 18, 12, 6]  
+DATA_OUT_VEC : [-1, 0, 0, -1, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 2, 2, 0, 2, 2, 2, 2]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [40, 35, 30, 25, 20, 15, 10, 5]  
+DATA_OUT_VEC : [-1, 35, 30, -1, 20, 15, 10, 5]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [32, 28, 24, 20, 16, 12, 8, 4]  
+DATA_OUT_VEC : [-1, 28, 24, -1, 16, 12, 8, 4]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [24, 21, 18, 15, 12, 9, 6, 3]  
+DATA_OUT_VEC : [-1, 0, 0, -1, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 2, 2, 0, 2, 2, 2, 2]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [16, 14, 12, 10, 8, 6, 4, 2]  
+DATA_OUT_VEC : [-1, 14, 12, -1, 8, 6, 4, 2]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+
+LAYER_STATUS_REG : 3  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [-1, 7, 6, -1, 4, 3, 2, 1]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+
+## TEST_3 (idle)
+
+LAYER_STATUS_REG : 0  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+LAYER_STATUS_REG : 0  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+LAYER_STATUS_REG : 0  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+LAYER_STATUS_REG : 0  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+LAYER_STATUS_REG : 0  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  
+LAYER_STATUS_REG : 0  
+THREAD_NUM_REG : 8  
+DATA_IN_VEC : [8, 7, 6, 5, 4, 3, 2, 1]  
+DATA_OUT_VEC : [0, 0, 0, 0, 0, 0, 0, 0]  
+INVALID_THREAD_IN_VEC : [0, 1, 1, 0, 1, 1, 1, 1]  

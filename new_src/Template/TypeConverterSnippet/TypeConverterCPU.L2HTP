@@ -1,0 +1,11 @@
+data_type bus2data_type(data_bus_type bus_data){
+    return bus_data;
+} 
+
+data_bus_type data_type2bus(data_type data){
+    return data;
+}
+
+addr_type bus2addr_type(addr_bus_type bus_addr){
+    return bus_addr;
+} 

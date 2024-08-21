@@ -1,0 +1,22 @@
+#ifdef DUMP_LOG_DEPTHWISECONV2D
+depthwiseconv2d::decoder<data_t, addr_t, signal_t, thread>(src_height, src_width, src_depth, src_size,
+                                                               dst_height, dst_width, dst_depth, dst_size,
+                                                               kernel_height, kernel_width, kernel_size,
+                                                               stride_height, stride_width, 
+                                                               CONST_VEC,
+                                                               mode,
+                                                               ADDR_SRC_VEC, ISVALID_SRC_VEC,
+                                                               ADDR_DST_VEC,
+                                                               ADDR_WEIGHT_VEC, ADDR_BIAS_VEC,
+                                                               _dump_file);
+#else
+depthwiseconv2d::decoder<data_t, addr_t, signal_t, thread>(src_height, src_width, src_depth, src_size,
+                                                               dst_height, dst_width, dst_depth, dst_size,
+                                                               kernel_height, kernel_width, kernel_size,
+                                                               stride_height, stride_width, 
+                                                               CONST_VEC,
+                                                               mode,
+                                                               ADDR_SRC_VEC, ISVALID_SRC_VEC,
+                                                               ADDR_DST_VEC,
+                                                               ADDR_WEIGHT_VEC, ADDR_BIAS_VEC);
+#endif

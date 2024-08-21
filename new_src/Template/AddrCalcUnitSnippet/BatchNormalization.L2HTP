@@ -1,0 +1,19 @@
+#ifdef DUMP_LOG_BATCHNORMALIZATION
+batchnormalization::decoder<data_t, addr_t, signal_t, thread>(src_height, src_width, src_depth, src_size,
+                                                                  dst_height, dst_width, dst_depth, dst_size,
+                                                                  mode,
+                                                                  ADDR_SRC_VEC, ISVALID_SRC_VEC,
+                                                                  ADDR_DST_VEC,
+                                                                  ADDR_WEIGHT_VEC, ADDR_BIAS_VEC,
+                                                                  ADDR_MEAN_VEC,
+                                                                  _dump_file);
+                                                                  # ADDR_GAMMA_VAR_VEC = ADDR_WEIGHT_VEC
+#else
+batchnormalization::decoder<data_t, addr_t, signal_t, thread>(src_height, src_width, src_depth, src_size,
+                                                                  dst_height, dst_width, dst_depth, dst_size,
+                                                                  mode,
+                                                                  ADDR_SRC_VEC, ISVALID_SRC_VEC,
+                                                                  ADDR_DST_VEC,
+                                                                  ADDR_WEIGHT_VEC, ADDR_BIAS_VEC,
+                                                                  ADDR_MEAN_VEC);
+#endif

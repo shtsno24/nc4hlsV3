@@ -1,0 +1,38 @@
+{
+    "data_vec_config": {
+        "0": 12544,
+        "1": 14400
+    },
+    "weights_vec_config": {
+        "2": 9,
+        "3": 32,
+        "7": 144,
+        "8": 136,
+        "12": 72,
+        "13": 72,
+        "17": 72,
+        "18": 144,
+        "22": 144,
+        "23": 102
+    },
+    "opcode": {
+        "0": "InputLayer",
+        "1": "ZeroPadding2D",
+        "2": "DepthwiseConv2D",
+        "3": "PointwiseConv",
+        "4": "ReLU",
+        "5": "MaxPooling2D",
+        "6": "UpSampling2D"
+    },
+    "data_types": {
+        "data_type": "float",
+        "addr_type": "int16_t",
+        "signal_type": "int16_t",
+        "data_bus_type": "float",
+        "addr_bus_type": "int64_t"
+    },
+    "output_index": {
+        "0": "separable_conv2d_4"
+    },
+    "thread_num": 19
+}
